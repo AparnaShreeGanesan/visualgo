@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisualAlgo | Compete</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">VisualAlgo</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="learn.html">Learn</a>
+        <a href="visualize.html">Visualize</a>
+        <a href="practice.html">Practice</a>
+        <a href="compete.html" class="active">Compete</a>
+      </div>
+      <div class="nav-stats">
+        <div class="badge" title="Daily Streak">
+          <span>🔥</span> <strong id="streakCount">0</strong>
+        </div>
+        <div class="badge" title="Total XP">
+          <span>⚡</span> <strong id="xpCount">0</strong>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Competition Arena</h1>
+    <p class="section-title">Weekly challenges, visual logic battles, and coding contests.</p>
+
+    <div class="grid">
+      <div class="card glass">
+        <h3>Weekly Algorithm Challenge</h3>
+        <p class="text-muted">Solve 3 problems in 30 minutes. Focus: Sorting + Binary Search.</p>
+        <button class="button" style="width: 100%; margin-top: 12px;">Join Challenge</button>
+      </div>
+      <div class="card glass">
+        <h3>Visual Logic Battle</h3>
+        <p class="text-muted">Race through step-by-step visual tasks to earn bonus XP.</p>
+        <button class="button secondary" style="width: 100%; margin-top: 12px;">Enter Battle</button>
+      </div>
+      <div class="card glass">
+        <h3>Code Sprint</h3>
+        <p class="text-muted">Timed contest with progressive difficulty levels.</p>
+        <button class="button secondary" style="width: 100%; margin-top: 12px;">Register</button>
+      </div>
+    </div>
+
+    <div class="split" style="margin-top: 24px;">
+      <div class="panel glass">
+        <h2>Global Leaderboard</h2>
+        <div class="list">
+          <div class="list-item" style="border-left: 3px solid var(--primary);">
+            <strong>1. Aditi</strong> <span>980 XP</span>
+          </div>
+          <div class="list-item" style="border-left: 3px solid var(--secondary);">
+            <strong>2. Rahul</strong> <span>940 XP</span>
+          </div>
+          <div class="list-item" style="border-left: 3px solid var(--warning);">
+            <strong>3. Priya</strong> <span>910 XP</span>
+          </div>
+          <div class="list-item" style="opacity: 0.7;">
+            4. You <span>890 XP</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel glass">
+        <h2>Challenge Calendar</h2>
+        <div class="list">
+          <div class="list-item">
+            <span class="badge">Mon</span> Binary Search Duel
+          </div>
+          <div class="list-item">
+            <span class="badge">Wed</span> Recursion Relay
+          </div>
+          <div class="list-item">
+            <span class="badge">Fri</span> Sorting Showdown
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 VisualAlgo. Compete to unlock rare badges and climb levels.</p>
+  </footer>
+
+  <script src="assets/common.js"></script>
+</body>
+
+</html>

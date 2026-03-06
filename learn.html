@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisualAlgo | Learning Path</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">VisualAlgo</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="learn.html" class="active">Learn</a>
+        <a href="visualize.html">Visualize</a>
+        <a href="practice.html">Practice</a>
+        <a href="compete.html">Compete</a>
+      </div>
+      <div class="nav-stats">
+        <div class="badge" title="Daily Streak">
+          <span>🔥</span> <strong id="streakCount">0</strong>
+        </div>
+        <div class="badge" title="Total XP">
+          <span>⚡</span> <strong id="xpCount">0</strong>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Learning Path</h1>
+    <p class="section-title">Follow the structured roadmap. Each module unlocks practice sets.</p>
+
+    <div class="grid">
+      <div class="card glass">
+        <h3>Search Algorithms</h3>
+        <p>Linear and binary search with decision tracking.</p>
+        <div class="controls" style="margin-top: 16px;">
+          <button class="button secondary" data-complete="linear">Mark Linear Search Done</button>
+          <button class="button secondary" data-complete="binary">Mark Binary Search Done</button>
+        </div>
+      </div>
+      <div class="card glass">
+        <h3>Sorting Algorithms</h3>
+        <p>Bubble, insertion, quick, and heap sorting walkthroughs.</p>
+        <div class="controls" style="margin-top: 16px;">
+          <button class="button secondary" data-complete="bubble">Bubble Sort Done</button>
+          <button class="button secondary" data-complete="insertion">Insertion Sort Done</button>
+          <button class="button secondary" data-complete="quick">Quick Sort Done</button>
+          <button class="button secondary" data-complete="heap">Heap Sort Done</button>
+        </div>
+      </div>
+      <div class="card glass">
+        <h3>Recursion & Backtracking</h3>
+        <p>Call stack intuition and constraint search.</p>
+        <div class="controls" style="margin-top: 16px;">
+          <button class="button secondary" data-complete="recursion">Recursion Done</button>
+          <button class="button secondary" data-complete="backtracking">Backtracking Done</button>
+        </div>
+      </div>
+      <div class="card glass">
+        <h3>Core Data Structures</h3>
+        <p>Linked lists, stacks, queues, and trees.</p>
+        <div class="controls" style="margin-top: 16px;">
+          <button class="button secondary" data-complete="linkedlist">Linked List Done</button>
+          <button class="button secondary" data-complete="stack">Stack Done</button>
+          <button class="button secondary" data-complete="queue">Queue Done</button>
+          <button class="button secondary" data-complete="tree">Tree Done</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel glass" style="margin-top: 24px;">
+      <h2>Concept Tree</h2>
+      <div class="tree-view">
+        <div class="tree-level">
+          <div class="node active">DSA Fundamentals</div>
+        </div>
+        <div class="tree-level">
+          <div class="node">Search</div>
+          <div class="node">Sort</div>
+          <div class="node">Structures</div>
+          <div class="node">Recursion</div>
+        </div>
+        <div class="tree-level">
+          <div class="node">Linear</div>
+          <div class="node">Binary</div>
+          <div class="node">Bubble</div>
+          <div class="node">Quick</div>
+          <div class="node">List</div>
+          <div class="node">Stack</div>
+          <div class="node">Queue</div>
+          <div class="node">Trees</div>
+          <div class="node">Backtracking</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 VisualAlgo. Adaptive guidance system.</p>
+  </footer>
+
+  <script src="assets/common.js"></script>
+  <script>
+    document.querySelectorAll('[data-complete]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-complete');
+        window.completeTopic(key);
+        btn.innerHTML = '<span>✅</span> Completed';
+        btn.classList.remove('secondary');
+        btn.style.background = 'rgba(16, 185, 129, 0.2)';
+        btn.style.color = '#fff';
+        btn.disabled = true;
+      });
+    });
+  </script>
+</body>
+
+</html>
